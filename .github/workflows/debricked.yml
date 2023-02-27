@@ -21,7 +21,7 @@ jobs:
           ${{ runner.os }}-go-
     - run: |
         printf "$(go mod graph)\n\n$(go list -mod=readonly -e -m all)" > .debricked-go-dependencies.txt
-        git config --global --add safe.directory /github/workspace
+
     - uses: debricked/actions/scan@v1
       env:
         DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_TOKEN }}
