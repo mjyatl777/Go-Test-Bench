@@ -5,7 +5,7 @@ on: [push]
 jobs:
   vulnerabilities-scan:
     runs-on: ubuntu-latest
-    git config --global --add safe.directory /github/workspace
+
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-go@v2
